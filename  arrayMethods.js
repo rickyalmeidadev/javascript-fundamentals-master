@@ -2,6 +2,10 @@
 
 const arrEx1 = [2, 4, 6, 7, 9, 12];
 
+const add2 = arr => arr.map(item => item + 2);
+
+// console.log(add2(arrEx1));
+
 // code here
 
 // ######################################### //
@@ -11,8 +15,10 @@ const arrEx1 = [2, 4, 6, 7, 9, 12];
 const arrEx2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
 const checkSum = (arr) => {
-  // code here
+    return arr.reduce((acc, cur) => acc + cur, 0) % 2 === 0 ? "even" : "odd";
 };
+
+// console.log(checkSum(arrEx2));
 
 // ######################################### //
 
@@ -20,9 +26,9 @@ const checkSum = (arr) => {
 
 const arrEx3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const evenNumbers = (arr) => {
-  // code here
-};
+const evenNumbers = (arr) => arr.filter(num => num % 2 === 0)
+
+// console.log(evenNumbers(arrEx3));
 
 // ######################################### //
 
@@ -30,21 +36,29 @@ const evenNumbers = (arr) => {
 
 const arrEx4 = ['a', 'c', 'g', 'r', 'w', 'e', 's', 'l', 'z', 'q', 'b', 'd'];
 
-const sortLetters = (arr) => {
-  // code here
-};
+const sortLetters = (arr) => arr.sort();
+
+// console.log(sortLetters(arrEx4));
 
 // ######################################### //
 
 //! Make a function that takes a number and returns that number multiplied by 5.
 
-// code here
+const multiplyBy5 = num => num * 5;
+
+// console.log(multiplyBy5(5))
 
 // ######################################### //
 
 //! Using any array method and the function built in the previous question, make a loop that print the elements of an array multiplied by 5.
 
-// code here
+const printNumbers = arr => {
+    arr.forEach(number => {
+        console.log(number);
+    })
+}
+
+// console.log(printNumbers([2, 5]))
 
 // ######################################### //
 
