@@ -6,15 +6,35 @@ const add2 = arr => arr.map(item => item + 2);
 
 // console.log(add2(arrEx1));
 
-// code here
 
 // ######################################### //
 
 //! Given an array of numbers, write a function checkSum that returns the string 'even' if the sum of all values are even, otherwise return 'odd';
 
-const arrEx2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+const arrEx2 = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+];
 
-const checkSum = (arr) => {
+const checkSum = arr => {
     return arr.reduce((acc, cur) => acc + cur, 0) % 2 === 0 ? "even" : "odd";
 };
 
@@ -26,7 +46,7 @@ const checkSum = (arr) => {
 
 const arrEx3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const evenNumbers = (arr) => arr.filter(num => num % 2 === 0)
+const evenNumbers = arr => arr.filter(num => num % 2 === 0);
 
 // console.log(evenNumbers(arrEx3));
 
@@ -34,9 +54,9 @@ const evenNumbers = (arr) => arr.filter(num => num % 2 === 0)
 
 //! Given an array of letters, write a function sortLetters that returns a new array of letters in alphabetical order.
 
-const arrEx4 = ['a', 'c', 'g', 'r', 'w', 'e', 's', 'l', 'z', 'q', 'b', 'd'];
+const arrEx4 = ["a", "c", "g", "r", "w", "e", "s", "l", "z", "q", "b", "d"];
 
-const sortLetters = (arr) => arr.sort();
+const sortLetters = arr => arr.sort();
 
 // console.log(sortLetters(arrEx4));
 
@@ -52,43 +72,40 @@ const multiplyBy5 = num => num * 5;
 
 //! Using any array method and the function built in the previous question, make a loop that print the elements of an array multiplied by 5.
 
-const printNumbers = arr => {
-    arr.forEach(number => {
-        console.log(number);
-    })
-}
-
-// console.log(printNumbers([2, 5]))
+arrEx3.map(number => console.log(multiplyBy5(number)));
 
 // ######################################### //
 
 //! Make a function that takes a letter and returns it uppercase
 
-// code here
+const letterToUpperCase = letter => letter.toUpperCase();
+
+// console.log(letterToUpperCase("b"))
 
 // ######################################### //
 
 //! Using any array method and the function built in the previous question, make a loop that print the elements upper case of an array.
 
-// code here
+arrEx4.map(letter => console.log(letterToUpperCase(letter)));
 
 // ######################################### //
 
 //! Create a function that takes a number and returns true if the number is odd and false if the number is even
 
-// code here
+const isOdd = number => (number % 2 !== 0 ? true : false);
+
+// console.log(isOdd(3));
 
 // ######################################### //
 
 //! Using any array method and the function built in the previous question, make a loop that return only the odd numbers.
 
-// code here
+console.log(arrEx3.filter(number => isOdd(number)))
 
 // ######################################### //
 
 //! Using any array method, make a loop that return the result of multiplying all the elements.
 
-// code here
+console.log(arrEx3.reduce((acc, cur) => acc * cur, 1));
 
 // ######################################### //
-
